@@ -1,0 +1,20 @@
+:root {
+    --pulse-bg-color: #474959;
+    --pulse-text-color: #FFF;
+  }
+
+body {
+    margin: auto;
+}
+
+.p-menuitem-link, .p-menubar-button, .p-menubar-end {
+    color: var(--pulse-text-color);
+}
+
+.p-menubar,.p-element, .p-submenu-list, .p-menubar-root-list {
+    background: var(--pulse-bg-color);
+}
+
+@import "primeng/resources/themes/md-light-indigo/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
