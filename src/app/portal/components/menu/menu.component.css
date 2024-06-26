@@ -1,5 +1,6 @@
 .containerDiv{
-    background-color: var(--surface-300);
+    background-color: var(--bluegray-200);
+    color: #fff;
 }
 .separatorDiv{
     background-color: var(--surface-400);

@@ -1,6 +1,8 @@
 <ng-container *transloco="let t; prefix: 'menu'">
     <div class="divHeader">
         <p-image src="/pulse.svg" alt="Image" height="60" width="60" class="logoImage" />
-        <p-button (click)="this.toggleMenu()" icon="pi pi-ellipsis-v" severity="secondary"/>
+        <div class="divButtonMenu">
+            <p-button (click)="this.toggleMenu()" icon="pi pi-ellipsis-v" severity="secondary" />
+        </div>
     </div>
 </ng-container>

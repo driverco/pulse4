@@ -1,14 +1,30 @@
 .divHeader {
-    background-color: var(--pulse-bg-color);
+
+    /*background: rgb(82,106,118);
+    background: linear-gradient(135deg, rgb(94, 129, 146) 0%,  rgba(187,199,205,1) 80%, rgba(255,255,255,1) 100%);
+    background-color: var(--pulse-bg-color);*/
+    background: rgb(187, 199, 205);
+    background: linear-gradient(135deg, rgba(187, 199, 205, 1) 0%, rgba(187, 199, 205, 1) 40%, rgba(255, 255, 255, 1) 100%);
     color: var(--pulse-text-color);
-    padding: 0;
+    padding: 10px;
     left: 0;
     right: 0;
     top: 0;
     margin: 0;
     height: 80px;
+    overflow: hidden;
+    vertical-align: top;
 }
-.logoImage{
+
+.logoImage {
     padding: 10px;
+    overflow: hidden;
+}
+.divButtonMenu{
+    overflow: hidden;
+    display: inline;
+    margin: 0;
+    top: -10px;
+    position: relative;
     
 }

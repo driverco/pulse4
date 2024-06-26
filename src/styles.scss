@@ -1,6 +1,7 @@
 :root {
-    --pulse-bg-color: #006167;
-    --pulse-bg-color-secondary: #04969e;
+    /*--pulse-bg-color: #006167;*/
+    --pulse-bg-color: var(--bluegray-200);
+    --pulse-bg-color-secondary: var(--bluegray-300);// #04969e;
     --pulse-text-color: #FFF;
     --primary-color:var(--pulse-bg-color);
    
@@ -10,12 +11,6 @@ body {
     margin: auto;
 }
 
-.p-menuitem-link, .p-menubar-button, .p-menubar-end {
-    color: var(--pulse-text-color);
-}
-.p-panelmenu-content{
-    padding: 0;
-}
 .p-button-secondary{
     background-color: var(--pulse-bg-color-secondary);
 
