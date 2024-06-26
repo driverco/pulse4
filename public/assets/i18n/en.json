@@ -1,0 +1,12 @@
+{
+    "title": "titleeng",
+    "menu": {
+        "home": "Home",
+        "esp": "Spanish",
+        "eng": "English",
+        "settings":"Settings",
+        "languaje":"Language",
+        "messages":"Messages",
+        "logout":"Logout"
+    }
+}

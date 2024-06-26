@@ -1,0 +1,7 @@
+.containerDiv{
+    background-color: var(--surface-300);
+}
+.separatorDiv{
+    background-color: var(--surface-400);
+    height: 2px;
+}

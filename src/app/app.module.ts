@@ -5,6 +5,8 @@ import { RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
 import { PortalModule } from './portal/portal.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco-root.module';
 
 //import { routes } from './routes';
 //import { DashboardModule } from './dashboard/dashboard.module';
@@ -15,7 +17,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
   ],
   imports: [
     BrowserModule,
-    PortalModule /*,
+    PortalModule,
+    HttpClientModule,
+    TranslocoRootModule /*,
     RouterModule.forRoot(routes, {
       bindToComponentInputs: true // <-- enable this feature
     })*/

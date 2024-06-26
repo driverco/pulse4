@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TranslocoService } from '@jsverse/transloco';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pulseAdmin';
+
+  constructor(private translocoService: TranslocoService) {
+  }
+
+  switchLanguage(lang:string) {
+    this.translocoService.setActiveLang(lang);
+  }
+
 }
