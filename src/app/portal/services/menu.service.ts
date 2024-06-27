@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { App } from '../models/App.model';
 import { MenuItem } from 'primeng/api';
 import { LangService } from './lang.service';
+import { App } from '../models/App.model';
 
 @Injectable({providedIn: 'root'})
 export class MenuService { 

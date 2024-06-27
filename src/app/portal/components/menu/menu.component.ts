@@ -3,8 +3,6 @@ import { MenuItem } from 'primeng/api';
 import { MenuService } from '../../services/menu.service';
 import { App } from '../../models/App.model';
 
-
-
 @Component({
   selector: 'portal-menu',
   templateUrl: './menu.component.html',
