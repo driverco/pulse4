@@ -4,27 +4,45 @@
     background: linear-gradient(135deg, rgb(94, 129, 146) 0%,  rgba(187,199,205,1) 80%, rgba(255,255,255,1) 100%);
     background-color: var(--pulse-bg-color);*/
     background: rgb(187, 199, 205);
-    background: linear-gradient(135deg, rgba(187, 199, 205, 1) 0%, rgba(187, 199, 205, 1) 40%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(135deg, rgb(125, 136, 141) 0%, rgba(187, 199, 205, 1) 80%, rgba(255, 255, 255, 1) 100%);
     color: var(--pulse-text-color);
-    padding: 10px;
+    padding:5px;
     left: 0;
     right: 0;
     top: 0;
     margin: 0;
-    height: 80px;
+    height: 60px;
     overflow: hidden;
     vertical-align: top;
 }
 
 .logoImage {
-    padding: 10px;
-    overflow: hidden;
+    margin-left: 100px;
+    margin-right: 10px;
+    padding-top: 10px;
 }
 .divButtonMenu{
-    overflow: hidden;
-    display: inline;
+    display: inline-block;
     margin: 0;
-    top: -10px;
-    position: relative;
-    
+    top: 0;
+    padding-top: 22px;
+    position: absolute;
+    border-right: 1px #fff solid;
+    height: 60px;
+    width: 85px;
+    text-align: center;
+    vertical-align: middle;
+}
+.divButtonAppName{
+    display: inline-block;
+    font-size: 2rem;
+    margin: 0;
+    top: 0;
+    padding-top: 10px;
+    padding-left: 20px;
+    position: absolute;
+    height: 60px;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
 }

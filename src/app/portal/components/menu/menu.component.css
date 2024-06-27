@@ -1,8 +1,11 @@
 .containerDiv{
     background-color: var(--bluegray-200);
     color: #fff;
+    
 }
 .separatorDiv{
     background-color: var(--surface-400);
     height: 2px;
 }
+
+

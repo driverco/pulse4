@@ -15,6 +15,9 @@ body {
     background-color: var(--pulse-bg-color-secondary);
 
 }
+.p-tabview .p-tabview-panels {
+    padding: 0;
+}
 
 
 /*.p-menubar,.p-element, .p-submenu-list, .p-menubar-root-list {

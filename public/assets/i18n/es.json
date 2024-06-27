@@ -7,7 +7,14 @@
         "settings":"Configuración",
         "languaje":"Idioma",
         "messages":"Mensajes",
-        "logout":"Cerrar Sesión"
+        "logout":"Cerrar Sesión",
+        "apps":{
+            "admin":"Admin",
+            "adminDesc":"Administración general",
+            "companies":"Compañias",
+            "companiesDesc":"Compañias y licencias"
+        }
+
 
     }
 }

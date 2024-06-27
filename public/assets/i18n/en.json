@@ -7,6 +7,12 @@
         "settings":"Settings",
         "languaje":"Language",
         "messages":"Messages",
-        "logout":"Logout"
+        "logout":"Logout",
+        "apps":{
+            "admin":"Admin",
+            "adminDesc":"Administration of general settings",
+            "companies":"Companies",
+            "companiesDesc":"Companies and licenses"
+        }
     }
 }

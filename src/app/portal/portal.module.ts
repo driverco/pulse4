@@ -10,10 +10,13 @@ import { BadgeModule } from 'primeng/badge';
 import { ImageModule } from 'primeng/image';
 import { SplitterModule } from 'primeng/splitter'
 import { PanelMenuModule } from 'primeng/panelmenu';
+import { TabViewModule } from 'primeng/tabview';
+import { DataViewModule } from 'primeng/dataview';
 import { TranslocoModule } from '@jsverse/transloco';
 import { PortalHeaderComponent } from './components/portalheader/portalheader.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MenuService } from './services/menu.service';
+import { LangService } from './services/lang.service';
 
 
 @NgModule({
@@ -30,9 +33,11 @@ import { MenuService } from './services/menu.service';
     ImageModule,
     PanelMenuModule,
     SplitterModule,
+    TabViewModule,
+    DataViewModule,
     TranslocoModule
   ],
-  providers: [MenuService
+  providers: [MenuService, LangService
   ],
   exports: [PortalComponent],
 })

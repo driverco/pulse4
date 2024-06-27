@@ -8,12 +8,12 @@ import { MenuService } from '../../services/menu.service';
   styleUrls: ['./portalheader.component.css']
 })
 export class PortalHeaderComponent{
+  langBrowser:string|undefined="";
    toggleMenu() {
     this.menuService.menuOpen = !this.menuService.menuOpen;
   }
   
   constructor(private menuService: MenuService) {
-  
   }
    
 }

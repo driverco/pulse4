@@ -30,8 +30,8 @@
      inkscape:cy="483.37732"
      inkscape:window-width="1450"
      inkscape:window-height="1041"
-     inkscape:window-x="4450"
-     inkscape:window-y="259"
+     inkscape:window-x="529"
+     inkscape:window-y="108"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg1"
      showguides="true">
@@ -54,24 +54,12 @@
      x="16.557617"
      y="300.58444"
      id="text1"
-     transform="matrix(1.1543637,0,0,2.3316564,85.834673,-351.91359)"><tspan
+     transform="matrix(1.1543637,0,0,2.3316564,11.083573,-364.52221)"><tspan
        x="16.557617"
        y="300.58444"
-       id="tspan5"><tspan
+       id="tspan2"><tspan
          style="font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93, ';stroke-linecap:square"
-         id="tspan3">ulse</tspan></tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:122.88px;white-space:pre;inline-size:433.308;display:inline;fill:#ffc304;fill-opacity:1;stroke:none;stroke-width:1.27992;stroke-dasharray:none;stroke-opacity:1"
-     x="16.557617"
-     y="300.58444"
-     id="text1-6"
-     transform="matrix(1.4661495,0,0,2.6106177,-27.930791,-436.13301)"><tspan
-       x="16.557617"
-       y="300.58444"
-       id="tspan7"><tspan
-         style="font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93, ';stroke-linecap:square"
-         id="tspan6">P</tspan></tspan></text>
+         id="tspan1">Pulse</tspan></tspan></text>
   <text
      xml:space="preserve"
      style="font-size:122.88px;white-space:pre;inline-size:433.308;display:inline;fill:#bbc7cd;fill-opacity:1;stroke:none;stroke-width:1.27992;stroke-dasharray:none;stroke-opacity:1"
@@ -81,7 +69,7 @@
      transform="matrix(2.3129497,0,0,2.6560801,310.53386,-446.71862)"><tspan
        x="16.557617"
        y="300.58444"
-       id="tspan9"><tspan
+       id="tspan4"><tspan
          style="font-weight:bold;font-family:Cambria;-inkscape-font-specification:'Cambria Bold';fill:#ffc304;stroke-linecap:square"
-         id="tspan8">4</tspan></tspan></text>
+         id="tspan3">4</tspan></tspan></text>
 </svg>

@@ -4,3 +4,9 @@
 .violetDiv{
     background-color: blueviolet;
 }
+.leftPanelDiv{
+    border: solid rgba(0, 0, 0, 0.12);
+    border-width: 1px;
+    width:250px;
+}
+
