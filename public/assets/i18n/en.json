@@ -1,18 +1,19 @@
 {
     "title": "titleeng",
+    "pagenotfound": "Page not found",
     "menu": {
         "home": "Home",
         "esp": "Spanish",
         "eng": "English",
-        "settings":"Settings",
-        "languaje":"Language",
-        "messages":"Messages",
-        "logout":"Logout",
-        "apps":{
-            "admin":"Admin",
-            "adminDesc":"Administration of general settings",
-            "companies":"Companies",
-            "companiesDesc":"Companies and licenses"
+        "settings": "Settings",
+        "languaje": "Language",
+        "messages": "Messages",
+        "logout": "Logout",
+        "apps": {
+            "admin": "Admin",
+            "adminDesc": "Administration of general settings",
+            "companies": "Companies",
+            "companiesDesc": "Companies and licenses"
         }
     }
 }

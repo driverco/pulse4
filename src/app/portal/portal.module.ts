@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PortalComponent } from './components/portal/portal.component';
+import { TranslocoModule } from '@jsverse/transloco';
 import { MenuModule } from 'primeng/menu';
 import { RippleModule } from 'primeng/ripple';
 import { MenubarModule  } from 'primeng/menubar';
@@ -12,15 +12,24 @@ import { SplitterModule } from 'primeng/splitter'
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { TabViewModule } from 'primeng/tabview';
 import { DataViewModule } from 'primeng/dataview';
-import { TranslocoModule } from '@jsverse/transloco';
+import { CardModule } from 'primeng/card';
+import { PasswordModule } from 'primeng/password';
+import { InputTextModule } from 'primeng/inputtext';
+import { FormsModule } from '@angular/forms';
+import { PortalComponent } from './components/portal/portal.component';
 import { PortalHeaderComponent } from './components/portalheader/portalheader.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { HomeComponent } from './components/home/home.component';
+import { NotFoundComponent } from './components/notfound/notfound.component';
+import { LoginComponent } from './components/login/login.component';
 import { MenuService } from './services/menu.service';
 import { LangService } from './services/lang.service';
+import { AuthService } from './services/auth.service';
+import { UsersService } from './services/users.service';
 
 
 @NgModule({
-  declarations: [PortalComponent, PortalHeaderComponent, MenuComponent
+  declarations: [PortalComponent, PortalHeaderComponent, MenuComponent, HomeComponent, NotFoundComponent, LoginComponent
   ],
   imports: [
     CommonModule,
@@ -35,9 +44,13 @@ import { LangService } from './services/lang.service';
     SplitterModule,
     TabViewModule,
     DataViewModule,
+    CardModule,
+    InputTextModule,
+    PasswordModule,
+    FormsModule,
     TranslocoModule
   ],
-  providers: [MenuService, LangService
+  providers: [MenuService, LangService, AuthService, UsersService
   ],
   exports: [PortalComponent],
 })

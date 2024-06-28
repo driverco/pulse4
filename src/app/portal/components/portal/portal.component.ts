@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
+import { AuthService } from '../../services/auth.service';
 
 
 @Component({
@@ -9,12 +10,15 @@ import { MenuService } from '../../services/menu.service';
 })
 export class PortalComponent{
   get menuOpen(): boolean {
-    return this.menuService.menuOpen;
+    if(this.authService.isAuthenticated()){
+      return this.menuService.menuOpen;
+    }
+    return false;
   }
 
   constructor(
-    private menuService: MenuService
-  ) { }
+    private menuService: MenuService, private authService:AuthService)
+  { }
 
 }
 

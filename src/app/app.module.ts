@@ -5,10 +5,11 @@ import { RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
 import { PortalModule } from './portal/portal.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module';
 
-//import { routes } from './routes';
+import { routes } from './routes';
+import { FormsModule } from '@angular/forms';
 //import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
@@ -18,14 +19,14 @@ import { TranslocoRootModule } from './transloco-root.module';
   imports: [
     BrowserModule,
     PortalModule,
-    HttpClientModule,
-    TranslocoRootModule /*,
+    FormsModule,
+    TranslocoRootModule ,
     RouterModule.forRoot(routes, {
       bindToComponentInputs: true // <-- enable this feature
-    })*/
+    })
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })

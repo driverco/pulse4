@@ -1,9 +1,9 @@
 <ng-container *transloco="let t; prefix: 'menu'">
-    <div class="divHeader">
-        <div class="divButtonMenu" (click)="this.toggleMenu()">
+    <div  class="divHeader">
+        <div *ngIf="auth" class="divButtonMenu" (click)="this.toggleMenu()">
             <i class="pi pi-bars"></i>&nbsp;&nbsp;MENU
         </div>
-        <p-image src="/pulse.svg" alt="Image" height="50" width="50" class="logoImage" />
+        <p-image src="/pulse.svg" alt="Image" height="50" width="50" class="logoImage" (click)="this.goHome()"  />
         <div class="divButtonAppName" >
             Admin
         </div>

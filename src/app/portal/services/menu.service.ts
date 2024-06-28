@@ -2,10 +2,12 @@ import { Injectable } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { LangService } from './lang.service';
 import { App } from '../models/App.model';
+import { AuthService } from './auth.service';
+import { Router } from '@angular/router';
 
 @Injectable({providedIn: 'root'})
 export class MenuService { 
-   constructor(private langService:LangService){}
+   constructor(private langService:LangService, private authService:AuthService, private router: Router){}
    menuOpen: boolean = true;
    private apps: App[] = [
       {
@@ -57,6 +59,7 @@ export class MenuService {
         key: '05',
         label: 'logout',
         icon: 'pi pi-sign-out',
+        command: () => { this.authService.signout();this.router.navigateByUrl("/") }
       }
 
     ];
