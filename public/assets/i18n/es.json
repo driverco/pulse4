@@ -19,8 +19,8 @@
         "apps": {
             "admin": "Admin",
             "adminDesc": "Administración general",
-            "companies": "Compañias",
-            "companiesDesc": "Compañias y licencias"
+            "companies": "Compañías",
+            "companiesDesc": "Compañías y licencias"
         }
     }
 }

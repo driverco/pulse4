@@ -33,9 +33,9 @@
 
             <p-dataView #dv [value]="apps">
                 <ng-template pTemplate="list" let-apps>
-                    <div class="grid grid-nogutter">
+                    <div class="grid grid-nogutter" >
                         <div class="col-12" *ngFor="let app of apps; let first = first" class="col-12">
-                            <div class="flex flex-column sm:flex-row sm:align-items-center p-2" [ngClass]="{ 'border-top-1 surface-border': !first }">
+                            <div class="flex flex-column sm:flex-row sm:align-items-center p-2" [ngClass]="{ 'border-top-1 surface-border': !first }" (click)="this.callApp(app)">
                                 <div class="relative">
                                     <img class="block xl:block mx-auto border-round" [src]="'/'+app.image" width="60" />
                                 </div>

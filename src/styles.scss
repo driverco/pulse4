@@ -4,6 +4,7 @@
     --pulse-bg-color-secondary: var(--bluegray-300);// #04969e;
     --pulse-text-color: #FFF;
     --primary-color:var(--pulse-bg-color);
+    --pulse-button-color: var(--bluegray-200);
    
   }
 
@@ -17,6 +18,9 @@ body {
 }
 .p-tabview .p-tabview-panels {
     padding: 0;
+}
+.p-button{
+    background-color: var(--orange-500);
 }
 
 

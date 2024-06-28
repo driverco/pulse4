@@ -1,11 +1,11 @@
-<ng-container *transloco="let t; prefix: 'menu'">
+<ng-container *transloco="let t; prefix: 'menu.apps'">
     <div  class="divHeader">
-        <div *ngIf="auth" class="divButtonMenu" (click)="this.toggleMenu()">
+        <div *ngIf="auth" class="divButtonMenu cursor-pointer" (click)="this.toggleMenu()">
             <i class="pi pi-bars"></i>&nbsp;&nbsp;MENU
         </div>
-        <p-image src="/pulse.svg" alt="Image" height="50" width="50" class="logoImage" (click)="this.goHome()"  />
-        <div class="divButtonAppName" >
-            {{title}}
+        <p-image src="/pulse.svg" alt="Image" height="50" width="50" class="logoImage cursor-pointer" (click)="this.goHome()"  />
+        <div *ngIf="currentApp.name!=''"  class="divButtonAppName" >
+            {{t(currentApp.name)}}
         </div>
     </div>
 </ng-container>

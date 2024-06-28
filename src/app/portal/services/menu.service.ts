@@ -4,14 +4,16 @@ import { LangService } from './lang.service';
 import { App } from '../models/App.model';
 import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
+import { BehaviorSubject, Subject } from 'rxjs';
 
-@Injectable({providedIn: 'root'})
-export class MenuService { 
-   constructor(private langService:LangService, private authService:AuthService, private router: Router){
+@Injectable({ providedIn: 'root' })
+export class MenuService {
+  constructor(private langService: LangService, private authService: AuthService, private router: Router) {
     this.menuOpen = false;
-   }
-   menuOpen: boolean = false;
-   langs: MenuItem[] = [{
+  }
+  menuOpen: boolean = false;
+
+  langs: MenuItem[] = [{
     key: 'set-lang-en',
     label: 'eng',
     icon: 'en',
@@ -24,19 +26,14 @@ export class MenuService {
     command: () => { this.langService.changeLang('es') }
   }];
 
-   private apps: App[] = [
-      {
-        name: 'admin',
-        image: 'cog-144.svg',
-        description: 'adminDesc'
-      },
-      {
-        name: 'companies',
-        image: 'building-48.png',
-        description: 'companiesDesc'
-      },
-    ];
-    private menu =  [
+
+  private menu = new BehaviorSubject<MenuItem[]>(this.getMenuData() );
+
+  menu$ = this.menu.asObservable();
+
+  
+  private getMenuData():MenuItem[] {
+    return [
       {
         key: 'set',
         label: 'settings',
@@ -46,7 +43,7 @@ export class MenuService {
             label: 'languaje',
             icon: 'pi pi-languaje',
             items: this.langs
-
+  
           }
         ]
       },
@@ -63,18 +60,12 @@ export class MenuService {
         key: '05',
         label: 'logout',
         icon: 'pi pi-sign-out',
-        command: () => { this.authService.signout()}
+        command: () => { this.authService.signout() }
       }
-
+  
     ];
+  
 
-
-    getApps() : App[]{
-      return this.apps;
-   }
-   getMenu(app: string) : MenuItem[]{
-      return this.menu;
-   }
-   
+  } 
 
 }

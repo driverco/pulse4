@@ -27,6 +27,7 @@ import { LangService } from './services/lang.service';
 import { AuthService } from './services/auth.service';
 import { UsersService } from './services/users.service';
 import { HomebrewComponent } from './components/homebrew/homebrew.component';
+import { AppService } from './services/app.service';
 
 
 @NgModule({
@@ -51,7 +52,7 @@ import { HomebrewComponent } from './components/homebrew/homebrew.component';
     FormsModule,
     TranslocoModule
   ],
-  providers: [MenuService, LangService, AuthService, UsersService
+  providers: [MenuService, LangService, AuthService, UsersService, AppService
   ],
   exports: [PortalComponent],
 })
