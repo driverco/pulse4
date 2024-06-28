@@ -26,10 +26,11 @@ import { MenuService } from './services/menu.service';
 import { LangService } from './services/lang.service';
 import { AuthService } from './services/auth.service';
 import { UsersService } from './services/users.service';
+import { HomebrewComponent } from './components/homebrew/homebrew.component';
 
 
 @NgModule({
-  declarations: [PortalComponent, PortalHeaderComponent, MenuComponent, HomeComponent, NotFoundComponent, LoginComponent
+  declarations: [PortalComponent, PortalHeaderComponent, MenuComponent, HomeComponent, NotFoundComponent, LoginComponent, HomebrewComponent
   ],
   imports: [
     CommonModule,

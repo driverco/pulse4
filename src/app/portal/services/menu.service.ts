@@ -7,8 +7,23 @@ import { Router } from '@angular/router';
 
 @Injectable({providedIn: 'root'})
 export class MenuService { 
-   constructor(private langService:LangService, private authService:AuthService, private router: Router){}
-   menuOpen: boolean = true;
+   constructor(private langService:LangService, private authService:AuthService, private router: Router){
+    this.menuOpen = false;
+   }
+   menuOpen: boolean = false;
+   langs: MenuItem[] = [{
+    key: 'set-lang-en',
+    label: 'eng',
+    icon: 'en',
+    command: () => { this.langService.changeLang('en') }
+  },
+  {
+    key: 'set-lang-es',
+    label: 'esp',
+    icon: 'es',
+    command: () => { this.langService.changeLang('es') }
+  }];
+
    private apps: App[] = [
       {
         name: 'admin',
@@ -30,18 +45,7 @@ export class MenuService {
             key: 'set-lang',
             label: 'languaje',
             icon: 'pi pi-languaje',
-            items: [{
-              key: 'set-lang-en',
-              label: 'eng',
-              icon: 'en',
-              command: () => { this.langService.changeLang('en') }
-            },
-            {
-              key: 'set-lang-es',
-              label: 'esp',
-              icon: 'es',
-              command: () => { this.langService.changeLang('es') }
-            }]
+            items: this.langs
 
           }
         ]
@@ -59,7 +63,7 @@ export class MenuService {
         key: '05',
         label: 'logout',
         icon: 'pi pi-sign-out',
-        command: () => { this.authService.signout();this.router.navigateByUrl("/") }
+        command: () => { this.authService.signout()}
       }
 
     ];

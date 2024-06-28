@@ -20,7 +20,7 @@
                         <ng-template #noLink>
                             <span [class]="'flex align-items-center cursor-pointer px-3 py-2 '+(item.items ? 'text-secondary containerDiv font-bold' :'')">
                                 <span [class]="item.icon"></span>
-                                <p-image *ngIf="langArray.includes(item.icon)" src="{{ '/'+ item.icon + '.png' }}" height="15" />
+                                <p-image *ngIf="langList.includes(item.icon)" src="{{ '/'+ item.icon + '.png' }}" height="15" />
                                 <span *ngIf="!item.separator"  class="ml-2">{{ t(item.label) }}</span>
                                 <i *ngIf="item.items" class="pi pi-angle-down ml-auto"></i>
                             </span>

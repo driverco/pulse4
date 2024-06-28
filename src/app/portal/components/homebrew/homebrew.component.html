@@ -1,1 +1,15 @@
-Homebrew
+<ng-container *transloco="let t; prefix: 'menu'">
+
+<div class="flex flex-wrap" style="max-width: 500px">
+    <div   *ngFor="let app of apps" class="flex align-items-center justify-content-center border-round"
+        style="min-width: 200px; min-height: 100px">
+        <p-card >
+            <img class="block xl:block mx-auto border-round" [src]="'/'+app.image" width="60" />
+            <h2 style="text-align: center;">{{t('apps.'+app.name)}}</h2>
+                {{t("apps."+app.description)}}
+            
+        </p-card>
+        
+    </div>
+</div>
+</ng-container>

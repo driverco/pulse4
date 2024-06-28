@@ -1,6 +1,13 @@
 {
     "title": "titleeng",
     "pagenotfound": "Page not found",
+    "login": {
+        "login": "Login",
+        "pleasesignin":"Please sign in to continue",
+        "user":"User",
+        "password":"Password",
+        "signin":"Sign in"
+    },
     "menu": {
         "home": "Home",
         "esp": "Spanish",
@@ -11,7 +18,7 @@
         "logout": "Logout",
         "apps": {
             "admin": "Admin",
-            "adminDesc": "Administration of general settings",
+            "adminDesc": "General settings",
             "companies": "Companies",
             "companiesDesc": "Companies and licenses"
         }

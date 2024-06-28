@@ -1,21 +1,26 @@
 {
     "title": "titleesp",
     "pagenotfound": "Página no encontrada",
+    "login": {
+        "login": "Inicio de sesión",
+        "pleasesignin":"por favor inicie sesión",
+        "user":"Usuario",
+        "password":"Contraseña",
+        "signin":"Iniciar sesión"
+    },
     "menu": {
         "home": "Inicio",
         "esp": "Español",
         "eng": "Inglés",
-        "settings":"Configuración",
-        "languaje":"Idioma",
-        "messages":"Mensajes",
-        "logout":"Cerrar Sesión",
-        "apps":{
-            "admin":"Admin",
-            "adminDesc":"Administración general",
-            "companies":"Compañias",
-            "companiesDesc":"Compañias y licencias"
+        "settings": "Configuración",
+        "languaje": "Idioma",
+        "messages": "Mensajes",
+        "logout": "Cerrar Sesión",
+        "apps": {
+            "admin": "Admin",
+            "adminDesc": "Administración general",
+            "companies": "Compañias",
+            "companiesDesc": "Compañias y licencias"
         }
-
-
     }
 }

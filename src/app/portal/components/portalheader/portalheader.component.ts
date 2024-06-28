@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./portalheader.component.css']
 })
 export class PortalHeaderComponent{
+  title: string ="";
   auth: boolean = false;
   langBrowser:string|undefined="";
    toggleMenu() {
@@ -18,9 +19,12 @@ export class PortalHeaderComponent{
   
   constructor(private menuService: MenuService, private authService: AuthService, private router: Router) {
     this.auth = this.authService.isAuthenticated();
+    authService.authenticated$.subscribe((auth) => {
+      this.auth = auth;
+      //this.linksService.getLinks(auth,this.authService.isAdmin()).then((links) => (this.items = links));
+    });
   }
   goHome(){
-    console.log("goHome");
     this.router.navigateByUrl("/");   
   }
 }

@@ -6,6 +6,7 @@ import { TranslocoService, getBrowserLang } from '@jsverse/transloco';
     providedIn: 'root',
 })
 export class LangService {
+    langList = ['en', 'es'];
     constructor(
         private translocoService: TranslocoService
       ) {

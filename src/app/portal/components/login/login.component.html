@@ -1,31 +1,53 @@
 <div class="flex justify-content-center flex-wrap">
-  <div class="flex align-items-center justify-content-center "><p-card header="Inicio de sesión"
-      subheader="Ingresa tu usuario y contraseña" [style]="{ width: '360px' }">
-      <p class="text-xs">
-        <b>cuenta demo usuario:</b><br />
-        usuario: pulse<br />
-        contraseña: pulse
-        <br /><br />
-        <b>cuenta demo admin:</b><br />
-        usuario: super<br />
-        contraseña: super
-      </p>
-      <p class="text-orange-600">
-        {{error}}
-      </p>
-      <br />
-      <span class="p-float-label">
-        <input pInputText id="username" [(ngModel)]="usernm" label="usuario" />
-        <label htmlFor="username">Usuario</label>
-      </span>
-      <br />
-      <span class="p-float-label">
-        <p-password [(ngModel)]="paswd" [feedback]="false"></p-password>
-        <label for="password">Contraseña</label>
-      </span>
 
-      <ng-template pTemplate="footer">
-        <p-button label="Iniciar sesión" icon="pi pi-user" (click)="login()"></p-button>
-      </ng-template>
-    </p-card></div>
+  <div class="grid">
+    <ng-container *transloco="let t; prefix: 'menu'">
+      <div class="col-12">
+        <div class="grid w-full flex-row-reverse flex-wrap align-items-end align-content-end">
+          <div class="col-3 flex" *ngFor="let lang of langList">
+            <div (click)="this.changeLang( lang.icon!)">
+              <p-image src="{{ '/'+ lang.icon + '.png' }}" height="15" />
+              {{t(lang.label!)}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *transloco="let t; prefix: 'login'">
+
+      <div class="col-12">
+        <div class="flex align-items-center justify-content-center ">
+          <p-card [header]="t('login')" [subheader]="t('pleasesignin')" [style]="{ width: '360px' }">
+            <p class="text-xs">
+              <b>demo user:</b><br />
+              {{t('user')}}: pulse<br />
+              {{t('password')}}: pulse
+              <br /><br />
+              <b>demo admin:</b><br />
+              {{t('user')}}: super<br />
+              {{t('password')}}: super
+            </p>
+            <p class="text-orange-600">
+              {{error}}
+            </p>
+            <br />
+            <span class="p-float-label">
+              <input pInputText id="username" [(ngModel)]="usernm" />
+              <label htmlFor="username">{{t('user')}}</label>
+            </span>
+            <br />
+            <span class="p-float-label">
+              <p-password [(ngModel)]="paswd" [feedback]="false"></p-password>
+              <label for="password">{{t('password')}}</label>
+            </span>
+
+            <ng-template pTemplate="footer">
+              <p-button [label]="t('signin')" icon="pi pi-user" (click)="login()"></p-button>
+            </ng-template>
+          </p-card>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
 </div>

@@ -4,7 +4,6 @@ import { ɵɵinject } from '@angular/core';
 
 // Define the authGuard function, which implements CanActivateFn interface
 export const AuthGuard: CanActivateFn = (route, state) => {
-  console.log("AuthGuard Init");
   // Use dependency injection to get an instance of the AuthService
   const authService = ɵɵinject(AuthService);
   const router = ɵɵinject(Router);
@@ -31,7 +30,6 @@ export const AdminGuard: CanActivateFn = (route, state) => {
   }
 };
 export const LoginGuard: CanActivateFn = (route, state) => {
-  console.log("LoginGuard Init");
   // Use dependency injection to get an instance of the AuthService
   const authService = ɵɵinject(AuthService);
   const router = ɵɵinject(Router);

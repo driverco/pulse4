@@ -1,6 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { MenuService } from '../../services/menu.service';
+import { MenuItem } from 'primeng/api';
+import { LangService } from '../../services/lang.service';
 
 @Component({
   selector: 'portal-login',
@@ -11,14 +14,12 @@ export class LoginComponent {
   error!: String;
   usernm!: String;
   paswd!: String;
+  langList: MenuItem[] =[];
 
-  constructor(private authService: AuthService, private router: Router) { }
-  // ngOnInit() {
-  //   /*this.usernm = "super";
-  //   this.paswd = "super";
-  //   this.login();
-  //   this.router.navigate(["/home"]);*/
-  // }
+  constructor(private authService: AuthService, private langService:LangService, private menuService: MenuService, private router: Router) {
+    this.langList = this.menuService.langs;
+   }
+  
 
 
   private _errorType: string = '';
@@ -53,7 +54,6 @@ export class LoginComponent {
   }
 
   login() {
-    console.log("auth init");
     this.errorType = '';
     if (!this.usernm) {
       this.errorType = 'invalidUsername';
@@ -72,10 +72,9 @@ export class LoginComponent {
       return;
     }
     this.authService.authenticate(this.usernm, this.paswd).then((data) => {
-      console.log(data);
       if (data === true) {
         this.errorType = 'authOk';
-        console.log("auth ok");
+        this.menuService.menuOpen =false;
         this.router.navigate(["/home"]);
       } else {
         this.errorType = 'invalidData';
@@ -83,4 +82,8 @@ export class LoginComponent {
     });
 
   }
+  changeLang(lang: string): void {
+    this.langService.changeLang(lang);
+  }
+
 }
