@@ -1,6 +1,7 @@
 {
     "title": "titleeng",
     "pagenotfound": "Page not found",
+    "welcometoapp":"Welcome to {{app}} module",
     "login": {
         "login": "Login",
         "pleasesignin":"Please sign in to continue",

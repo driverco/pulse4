@@ -10,11 +10,16 @@ import { AppService } from '../../services/app.service';
   styleUrls: ['./homebrew.component.css']
 })
 export class HomebrewComponent {
+  currentApp: App = new App;
   apps: App[] = [];
   constructor(private menuService: MenuService, private appService: AppService) {
     appService.getApps().then(data => {
       this.apps = data;
     });
+    appService.currentApp$.subscribe((app) => {
+      this.currentApp = app;
+    });
+
   }
   
   callApp(app:App){

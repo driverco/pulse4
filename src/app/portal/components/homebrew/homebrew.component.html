@@ -1,14 +1,18 @@
-<ng-container *transloco="let t; prefix: 'menu'">
+<ng-container *transloco="let t;" >
 
-<div class="flex flex-wrap" style="max-width: 500px">
+<div *ngIf="!currentApp.name" class="flex flex-wrap">
     <div   *ngFor="let app of apps" class="flex align-items-center justify-content-center border-round cursor-pointer"
         style="min-width: 200px; min-height: 100px">
         <p-card (click)="this.callApp(app)">
             <img class="block xl:block mx-auto border-round" [src]="'/'+app.image" width="60" />
-            <h2 style="text-align: center;">{{t('apps.'+app.name)}}</h2>
-                {{t("apps."+app.description)}}
+            <h2 style="text-align: center;">{{t('menu.apps.'+app.name)}}</h2>
+                {{t("menu.apps."+app.description)}}
         </p-card>
         
     </div>
 </div>
+<div *ngIf="currentApp.name" class="flex flex-wrap">
+    {{t('welcometoapp',{app: t('menu.apps.'+currentApp.name)})}}
+</div>
+
 </ng-container>

@@ -1,6 +1,7 @@
 {
     "title": "titleesp",
     "pagenotfound": "Página no encontrada",
+    "welcometoapp":"Bienvenido al módulo {{app}}",
     "login": {
         "login": "Inicio de sesión",
         "pleasesignin":"por favor inicie sesión",

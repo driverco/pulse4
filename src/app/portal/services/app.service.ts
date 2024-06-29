@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
 import { App } from '../models/App.model';
 import { Subject } from 'rxjs';
+import { MenuService } from './menu.service';
 
 @Injectable()
 export class AppService {
+  constructor(private menuService: MenuService){ 
+
+  }
   private currentApp = new Subject<App>();
 
   currentApp$ = this.currentApp.asObservable();
@@ -26,6 +30,7 @@ export class AppService {
 
   setCurrentApp(app: App) {
     this.currentApp.next(app);
+    this.menuService.menuOpen = true;
   }
 
   getApps(): Promise<App[]> {
