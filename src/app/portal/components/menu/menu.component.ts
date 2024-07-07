@@ -46,7 +46,7 @@ export class MenuComponent implements OnInit {
       this.auth = auth;
       //this.linksService.getLinks(auth,this.authService.isAdmin()).then((links) => (this.items = links));
       if (!auth) {
-        router.navigate(["/login/_"]);
+        router.navigate(["/login/"]);
       }
     });
 

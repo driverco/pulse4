@@ -10,5 +10,6 @@ export const routes: Routes = [
     { path: '', redirectTo: '/login/', pathMatch: 'full' },
     { path: 'login/:errorType', component: LoginComponent, pathMatch: "full", canActivate:[LoginGuard] },
     { path: 'notfound', component: NotFoundComponent },
-    { path: '**', redirectTo: '/notfound', pathMatch: 'full' }
+    { path: '**', redirectTo: '/login', pathMatch: 'full' },
+
 ];

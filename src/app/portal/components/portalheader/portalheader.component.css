@@ -1,48 +1,81 @@
 .divHeader {
 
-    /*background: rgb(82,106,118);
+   /*background: rgb(82,106,118);
     background: linear-gradient(135deg, rgb(94, 129, 146) 0%,  rgba(187,199,205,1) 80%, rgba(255,255,255,1) 100%);
     background-color: var(--pulse-bg-color);*/
-    background: rgb(187, 199, 205);
-    background: linear-gradient(135deg, rgb(125, 136, 141) 0%, rgba(187, 199, 205, 1) 80%, rgba(255, 255, 255, 1) 100%);
-    color: var(--pulse-text-color);
-    padding:5px;
-    left: 0;
-    right: 0;
-    top: 0;
-    margin: 0;
-    height: 60px;
-    overflow: hidden;
-    vertical-align: top;
+   background: rgb(187, 199, 205);
+   background: linear-gradient(135deg, #ff8800 0%, rgba(187, 199, 205, 1) 80%, rgba(255, 255, 255, 1) 100%);
+
+   left: 0;
+   right: 0;
+   top: 0;
+   margin: 0;
+   overflow: hidden;
+   vertical-align: top;
+   background-image: url("/rocket.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   opacity: 0.8;
+}
+
+.divHeaderInner {
+   background: linear-gradient(135deg, rgba(39, 109, 186, 0.5) 0%, rgba(255, 136, 0, 0.5) 80%, rgba(255, 255, 255, 1) 100%);
+   color: var(--pulse-text-color);
+   padding: 5px;
+   left: 0;
+   right: 0;
+   top: 0;
+   margin: 0;
 }
 
 .logoImage {
-    margin-left: 100px;
-    margin-right: 10px;
-    padding-top: 10px;
+   margin-left: 100px;
+   margin-right: 10px;
+   padding-top: 10px;
+   z-index: -1;
 }
-.divButtonMenu{
-    display: inline-block;
-    margin: 0;
-    top: 0;
-    padding-top: 22px;
-    position: absolute;
-    border-right: 1px #fff solid;
-    height: 60px;
-    width: 85px;
-    text-align: center;
-    vertical-align: middle;
+
+.divButtonMenu {
+   display: inline-block;
+   margin: 0;
+   top: 0;
+   padding-top: 22px;
+   position: absolute;
+   border-right: 1px #fff solid;
+   height: 60px;
+   width: 85px;
+   text-align: center;
+   vertical-align: middle;
 }
-.divButtonAppName{
-    display: inline-block;
-    font-size: 2rem;
-    margin: 0;
-    top: 0;
-    padding-top: 10px;
-    padding-left: 20px;
-    position: absolute;
-    height: 60px;
-    width: 100px;
-    text-align: center;
-    vertical-align: middle;
+
+.divButtonAppName {
+   display: inline-block;
+   font-size: 2rem;
+   margin: 0;
+   top: 0;
+   padding-top: 10px;
+   padding-left: 20px;
+   position: absolute;
+   height: 60px;
+   width: 100px;
+   text-align: center;
+   vertical-align: middle;
+}
+
+.divAppName {
+   color: #FFF;
+   /*background-color: rgba(255, 255, 255, 0.1);*/
+   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.5) 100%);
+   padding-bottom: 10px;
+   width: 100%;
+   position: absolute;
+   top: 150px;
+   left: 0%;
+   font-size: 3rem;
+   text-align: center;
+}
+
+.version{
+   font-size: 0.7rem;
 }

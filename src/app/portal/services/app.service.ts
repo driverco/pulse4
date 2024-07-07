@@ -28,9 +28,14 @@ export class AppService {
 
   }
 
-  setCurrentApp(app: App) {
-    this.currentApp.next(app);
-    this.menuService.menuOpen = true;
+  setCurrentApp(app: App| undefined) {
+    if(app){
+      this.currentApp.next(app);
+      this.menuService.menuOpen = true;
+    }else{
+      this.currentApp.next(new App);
+      this.menuService.menuOpen = false;
+    }
   }
 
   getApps(): Promise<App[]> {

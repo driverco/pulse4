@@ -32,6 +32,7 @@ export class PortalHeaderComponent {
     });
   }
   goHome() {
+    this.appService.setCurrentApp(undefined);
     this.router.navigateByUrl("/");
   }
 }
