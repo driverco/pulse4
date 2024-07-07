@@ -4,6 +4,7 @@ import { AuthService } from '../../services/auth.service';
 import { MenuService } from '../../services/menu.service';
 import { MenuItem } from 'primeng/api';
 import { LangService } from '../../services/lang.service';
+import { AppService } from '../../services/app.service';
 
 @Component({
   selector: 'portal-login',
@@ -16,7 +17,7 @@ export class LoginComponent {
   paswd!: String;
   langList: MenuItem[] =[];
 
-  constructor(private authService: AuthService, private langService:LangService, private menuService: MenuService, private router: Router) {
+  constructor(private authService: AuthService, private langService:LangService, private menuService: MenuService, private appService: AppService, private router: Router) {
     this.langList = this.menuService.langs;
    }
   

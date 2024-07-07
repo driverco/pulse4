@@ -8,10 +8,10 @@
 
 }
 
-body {
-    margin: auto;
+body, html{
+    margin:0;
+    padding:0;
 }
-
 .p-button-secondary {
     background-color: var(--pulse-bg-color-secondary);
 

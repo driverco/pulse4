@@ -7,7 +7,8 @@
         "pleasesignin":"por favor inicie sesión",
         "user":"Usuario",
         "password":"Contraseña",
-        "signin":"Iniciar sesión"
+        "signin":"Iniciar sesión",
+        "copyright":"Todos los derechos resevados."
     },
     "menu": {
         "home": "Inicio",

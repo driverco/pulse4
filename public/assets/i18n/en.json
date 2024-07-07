@@ -7,7 +7,8 @@
         "pleasesignin":"Please sign in to continue",
         "user":"User",
         "password":"Password",
-        "signin":"Sign in"
+        "signin":"Sign in",
+        "copyright":"All rights reserved."
     },
     "menu": {
         "home": "Home",

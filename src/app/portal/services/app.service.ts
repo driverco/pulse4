@@ -31,10 +31,10 @@ export class AppService {
   setCurrentApp(app: App| undefined) {
     if(app){
       this.currentApp.next(app);
-      this.menuService.menuOpen = true;
+      this.menuService.menuOpen = false;
     }else{
       this.currentApp.next(new App);
-      this.menuService.menuOpen = false;
+      this.menuService.menuOpen = true;
     }
   }
 
