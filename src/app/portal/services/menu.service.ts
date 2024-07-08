@@ -27,13 +27,45 @@ export class MenuService {
   }];
 
 
-  private menu = new BehaviorSubject<MenuItem[]>(this.getMenuData() );
+  private menu = new BehaviorSubject<MenuItem[]>(this.getMenuData(undefined));
 
   menu$ = this.menu.asObservable();
 
-  
-  private getMenuData():MenuItem[] {
-    return [
+
+  refreshMenu(app: App | undefined): void {
+    this.menu.next(this.getMenuData(app));
+  }
+
+  private getMenuData(app: App | undefined): MenuItem[] {
+    let menuData: MenuItem[] = [];
+    if (app?.name === "companies") {
+      Array.prototype.push.apply(menuData, [
+        {
+          key: 'compa',
+          label: 'apps.companies',
+          items: [
+            {
+              key: 'compa01',
+              label: 'companies.defineCompanies',
+              icon: 'pi pi-languaje'
+            },
+            {
+              key: 'compa02',
+              label: 'companies.defineSets',
+              icon: 'pi pi-languaje'
+            },
+            {
+              key: 'compa03',
+              label: 'companies.setLicences',
+              icon: 'pi pi-languaje'
+            }
+
+          ]
+        },
+      ]);
+
+    }
+    Array.prototype.push.apply(menuData, [
       {
         key: 'set',
         label: 'settings',
@@ -43,7 +75,7 @@ export class MenuService {
             label: 'languaje',
             icon: 'pi pi-languaje',
             items: this.langs
-  
+
           }
         ]
       },
@@ -62,10 +94,10 @@ export class MenuService {
         icon: 'pi pi-sign-out',
         command: () => { this.authService.signout() }
       }
-  
-    ];
-  
 
-  } 
+    ]);
+    return menuData;
+
+  }
 
 }

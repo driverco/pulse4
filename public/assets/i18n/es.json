@@ -23,6 +23,12 @@
             "adminDesc": "Administración general",
             "companies": "Compañías",
             "companiesDesc": "Compañías y licencias"
+        },
+        "companies":{
+            "defineCompanies": "Definir compañias",
+            "defineSets": "Definir Sets",
+            "setLicences":"Licencias"
+            
         }
     }
 }

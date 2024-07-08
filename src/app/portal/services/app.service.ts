@@ -31,11 +31,13 @@ export class AppService {
   setCurrentApp(app: App| undefined) {
     if(app){
       this.currentApp.next(app);
-      this.menuService.menuOpen = false;
+      this.menuService.menuOpen = true;
     }else{
       this.currentApp.next(new App);
-      this.menuService.menuOpen = true;
+      this.menuService.menuOpen = false;
     }
+    this.menuService.refreshMenu(app);
+
   }
 
   getApps(): Promise<App[]> {
