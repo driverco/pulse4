@@ -22,16 +22,18 @@ import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/notfound/notfound.component';
 import { LoginComponent } from './components/login/login.component';
+import { QrCodeModule } from 'ng-qrcode';
 import { MenuService } from './services/menu.service';
 import { LangService } from './services/lang.service';
 import { AuthService } from './services/auth.service';
 import { UsersService } from './services/users.service';
 import { HomebrewComponent } from './components/homebrew/homebrew.component';
 import { AppService } from './services/app.service';
+import { QRCodesComponent } from './components/qrcodes/qrcodes.component';
 
 
 @NgModule({
-  declarations: [PortalComponent, PortalHeaderComponent, MenuComponent, HomeComponent, NotFoundComponent, LoginComponent, HomebrewComponent
+  declarations: [PortalComponent, PortalHeaderComponent, MenuComponent, HomeComponent, NotFoundComponent, LoginComponent, HomebrewComponent, QRCodesComponent
   ],
   imports: [
     CommonModule,
@@ -50,7 +52,8 @@ import { AppService } from './services/app.service';
     InputTextModule,
     PasswordModule,
     FormsModule,
-    TranslocoModule
+    TranslocoModule,
+    QrCodeModule
   ],
   providers: [MenuService, LangService, AuthService, UsersService, AppService
   ],
