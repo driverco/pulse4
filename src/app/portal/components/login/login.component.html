@@ -6,7 +6,7 @@
         <div class="grid w-full flex-row-reverse flex-wrap align-items-end align-content-end">
           <div class="col-3 flex" *ngFor="let lang of langList">
             <div (click)="this.changeLang( lang.icon!)">
-              <p-image src="{{ '/'+ lang.icon + '.png' }}" height="15" />
+              <p-image src="{{ '/img/'+ lang.icon + '.png' }}" height="15" />
               {{t(lang.label!)}}
             </div>
           </div>

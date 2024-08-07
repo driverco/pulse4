@@ -9,12 +9,6 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./portal.component.css']
 })
 export class PortalComponent{
-  get menuOpen(): boolean {
-    if(this.authService.isAuthenticated()){
-      return this.menuService.menuOpen;
-    }
-    return false;
-  }
 
   constructor(
     private menuService: MenuService, private authService:AuthService)

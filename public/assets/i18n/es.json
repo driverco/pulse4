@@ -1,17 +1,17 @@
 {
     "title": "titleesp",
     "pagenotfound": "Página no encontrada",
-    "welcometoapp":"Bienvenido al módulo {{app}}",
+    "welcometoapp": "Bienvenido al módulo {{app}}",
     "login": {
         "login": "Inicio de sesión",
-        "pleasesignin":"por favor inicie sesión",
-        "user":"Usuario",
-        "password":"Contraseña",
-        "signin":"Iniciar sesión",
-        "copyright":"Todos los derechos resevados."
+        "pleasesignin": "por favor inicie sesión",
+        "user": "Usuario",
+        "password": "Contraseña",
+        "signin": "Iniciar sesión",
+        "copyright": "Todos los derechos resevados."
     },
     "menu": {
-        "home": "Inicio",
+        "houston": "Houston",
         "esp": "Español",
         "eng": "Inglés",
         "settings": "Configuración",
@@ -19,16 +19,14 @@
         "messages": "Mensajes",
         "logout": "Cerrar Sesión",
         "apps": {
-            "admin": "Admin",
-            "adminDesc": "Administración general",
-            "companies": "Compañías",
-            "companiesDesc": "Compañías y licencias"
-        },
-        "companies":{
-            "defineCompanies": "Definir compañias",
-            "defineSets": "Definir Sets",
-            "setLicences":"Licencias"
-            
+            "houston": {
+                "companies": {
+                    "companies": "Compañías",
+                    "defineCompanies": "Definir compañias",
+                    "defineSets": "Definir Sets",
+                    "setLicences": "Licencias"
+                }
+            }
         }
     }
 }

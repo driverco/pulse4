@@ -1,10 +1,7 @@
 <ng-container *transloco="let t; prefix: 'menu.apps'">
     <div [class]="'divHeader flex '+(auth?'':'backgroundImageHeader')">
         <div class="divHeaderInner flex">
-            <div *ngIf="auth" class="divButtonMenu flex cursor-pointer" (click)="this.toggleMenu()">
-                <i class="pi pi-bars"></i>&nbsp;&nbsp;MENU
-            </div>
-            <img src="/pulse.svg" alt="Image" [height]="(auth?'60':'200')" [width]="(auth?'60':'200')" class="logoImage cursor-pointer"
+            <img src="/img/pulse.svg" alt="Image" [height]="(auth?'0':'200')" [width]="(auth?'0':'200')" class="logoImage cursor-pointer"
                 (click)="this.goHome()" />
             <div *ngIf="auth&&currentApp.name!=''" class="divModuleName">
                 {{t(currentApp.name)}}

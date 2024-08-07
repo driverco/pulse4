@@ -16,7 +16,7 @@
 }
 
 .backgroundImageHeader {
-   background-image: url("/rocket.jpg");
+   background-image: url("/img/rocket.jpg");
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;

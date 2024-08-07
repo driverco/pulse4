@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
 import { App } from '../../models/App.model';
-import { AppService } from '../../services/app.service';
+import { Menu } from '../../models/Menu.model';
 
 
 @Component({
@@ -10,22 +10,18 @@ import { AppService } from '../../services/app.service';
   styleUrls: ['./homebrew.component.css']
 })
 export class HomebrewComponent {
-  currentApp: App = new App;
-  apps: App[] = [];
-  constructor(private menuService: MenuService, private appService: AppService) {
-    appService.getApps().then(data => {
-      this.apps = data;
-    });
-    appService.currentApp$.subscribe((app) => {
+  currentApp: App = { name: localStorage.getItem('app') || '' };
+  menuItems: Menu[] = [];
+  constructor(private menuService: MenuService ) {
+    this.menuService.currentApp$.subscribe((app) => {
       this.currentApp = app;
+    });
+    this.menuService.menu$.subscribe((menu) => {
+      this.menuItems = menu;
     });
 
   }
   
-  callApp(app:App){
-    this.appService.setCurrentApp(app);
-  }
-
 }
 
 

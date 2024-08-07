@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MenuService } from '../../services/menu.service';
 
 
 @Component({
@@ -8,13 +7,7 @@ import { MenuService } from '../../services/menu.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent{
-  get menuOpen(): boolean {
-    return this.menuService.menuOpen;
-  }
 
-  constructor(
-    private menuService: MenuService
-  ) { }
 
 }
 

@@ -1,11 +1,70 @@
-.containerDiv{
-    background-color: var(--bluegray-200);
-    color: #fff;
-    
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+.side-menu {
+  font-family: 'Roboto', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 50px;
+  list-style-type: none;
+  background: #ff8800;
+  overflow: hidden;
+  transition: width .3s;
+  z-index: 9;
 }
-.separatorDiv{
-    background-color: var(--surface-400);
-    height: 2px;
+
+.side-menu:hover {
+  width: 300px;
+}
+
+.side-menu li {
+    width: 300px;
+}
+
+.side-menu li span {
+  font-size: 1rem;
+  margin: 20px 30px 0 22px;
+}
+
+.side-menu li a {
+  display: block;
+  font-size: .9rem;
+  text-decoration: none;
+  color: #FFF;
+  height: 40px;
+  top: 0;
+}
+.iconMenu{
+    padding: 10px;
+    font-size: 1.5rem;
+}
+.textMenu{
+    padding-bottom: 18px;
+}
+.logoMenu{
+    padding-top: 10px;
+}
+.menuAppName{
+    display: block;
+    float: right ;
+    font-size: 2rem;
+    margin-top: 0;
+    top: 0;
+    padding: 10px;
+    height: 60;
+    width: 240px;
+
 }
 
 
+.side-menu li a:hover,
+.side-menu li:first-child a {
+  background: #14081d;
+  display: block;
+}
+.side-menu li:first-child a {
+    display: block;
+    height: 60px;
+}

@@ -1,59 +1,28 @@
 <ng-container *transloco="let t; prefix: 'menu'">
-    <p-tabView>
-        <p-tabPanel header="Menu">
-            <p-panelMenu [model]="items" styleClass="w-full" [multiple]="true">
-                <ng-template pTemplate="item" let-item>
-        
-                    <ng-container *ngIf="item.route; else urlRef">
-                        <a [routerLink]="item.route" class="flex align-items-center cursor-pointer text-color px-3 py-2">
-                            <span [class]="item.icon"></span>
-                            <span class="ml-2 text-color">{{ t(item.label) }}</span>
-                        </a>
-                    </ng-container>
-        
-                    <ng-template #urlRef>
-                        <a *ngIf="item.url; else noLink" [href]="item.url" class="flex containerDiv align-items-center 
-                                cursor-pointer text-color px-3 py-2">
-                            <span [class]="item.icon"></span>
-                            <span *ngIf="!item.separator" class="ml-2">{{ t(item.label) }}</span>
-                        </a>
-                        <ng-template #noLink>
-                            <span [class]="'flex align-items-center cursor-pointer px-3 py-2 '+(item.items ? 'text-secondary containerDiv font-bold' :'')">
-                                <span [class]="item.icon"></span>
-                                <p-image *ngIf="langList.includes(item.icon)" src="{{ '/'+ item.icon + '.png' }}" height="15" />
-                                <span *ngIf="!item.separator"  class="ml-2">{{ t(item.label) }}</span>
-                                <i *ngIf="item.items" class="pi pi-angle-down ml-auto"></i>
-                            </span>
-                        </ng-template>
-                    </ng-template>
-                </ng-template>
-            </p-panelMenu>
-        </p-tabPanel>
-        <p-tabPanel header="Apps">
+    <ul *ngIf="auth" class="side-menu">
+        <li>
+            <a (click)="this.clearApp()">
+                <img src="/img/pulse.svg" alt="Image" [height]="(auth?'50':'200')" [width]="(auth?'50':'200')"
+                    class="logoMenu cursor-pointer" />
+                <div class="menuAppName">Apolo1</div>
+            </a>
+        </li>
+        <li *ngFor="let item of items">
+            <div>
+                <a *ngIf="item.route"  [routerLink]="item.route" class="flex align-items-center cursor-pointer">
+                    <ng-container *ngTemplateOutlet="menuItem; context{item}" />
+                </a>
+                <a *ngIf="item.command" (click)="item.command()" class="flex align-items-center cursor-pointer">
+                    <ng-container *ngTemplateOutlet="menuItem; context{item}" />
+                </a>
+            </div>
+        </li>
 
-            <p-dataView #dv [value]="apps">
-                <ng-template pTemplate="list" let-apps>
-                    <div class="grid grid-nogutter" >
-                        <div class="col-12" *ngFor="let app of apps; let first = first" class="col-12">
-                            <div class="flex flex-column sm:flex-row sm:align-items-center p-2 cursor-pointer" [ngClass]="{ 'border-top-1 surface-border': !first }" (click)="this.callApp(app)">
-                                <div class="relative">
-                                    <img class="block xl:block mx-auto border-round" [src]="'/'+app.image" width="60" />
-                                </div>
-                                <div class="flex flex-column md:flex-row justify-content-between md:align-items-center flex-1 gap-4">
-                                    <div class="flex flex-row md:flex-column justify-content-between align-items-start gap-2">
-                                        <div>
-                                            <span class="text-lg font-medium text-900 mt-2">{{ t("apps."+app.name) }}</span>
-                                            <div class="text-secondary">{{ t("apps."+app.description) }}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </ng-template>
-            </p-dataView>
-
-        </p-tabPanel>
-
-    </p-tabView>
+    </ul>
+    <ng-template #menuItem let-item='item'>
+        <img [src]="'/'+item.icon" class="iconMenu" />
+        <span class="textMenu">{{t(item.label!)}}</span>
+    </ng-template>
+    
 </ng-container>
+

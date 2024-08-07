@@ -1,18 +1,21 @@
-<ng-container *transloco="let t;" >
+<ng-container *transloco="let t;">
 
-<div *ngIf="!currentApp.name" class="flex flex-wrap">
-    <div   *ngFor="let app of apps" class="flex align-items-center justify-content-center border-round cursor-pointer"
-        style="min-width: 200px; min-height: 100px">
-        <p-card (click)="this.callApp(app)">
-            <img class="block xl:block mx-auto border-round" [src]="'/'+app.image" width="60" />
-            <h2 style="text-align: center;">{{t('menu.apps.'+app.name)}}</h2>
-                {{t("menu.apps."+app.description)}}
-        </p-card>
-        
+    <div *ngIf="currentApp.name" class="flex flex-wrap">
+        {{t('welcometoapp',{app: t('menu.'+currentApp.name)})}}
     </div>
-</div>
-<div *ngIf="currentApp.name" class="flex flex-wrap">
-    {{t('welcometoapp',{app: t('menu.apps.'+currentApp.name)})}}
-</div>
+
+    <ng-container *ngFor="let item of menuItems">
+        <p-fieldset [legend]="t('menu.apps.'+currentApp.name+'.'+item.label+'.'+item.label)" [toggleable]="true">
+            <ng-container *ngFor="let submenu of item.items">
+
+                <button pButton pRipple [label]="t('menu.apps.'+currentApp.name+'.'+item.label+'.'+submenu.label)" class="p-button-success m-1 w-5">
+                </button>
+
+            </ng-container>
+        </p-fieldset>
+
+
+
+    </ng-container>
 
 </ng-container>

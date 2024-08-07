@@ -1,17 +1,17 @@
 {
     "title": "titleeng",
     "pagenotfound": "Page not found",
-    "welcometoapp":"Welcome to {{app}} module",
+    "welcometoapp": "Welcome to {{app}} module",
     "login": {
         "login": "Login",
-        "pleasesignin":"Please sign in to continue",
-        "user":"User",
-        "password":"Password",
-        "signin":"Sign in",
-        "copyright":"All rights reserved."
+        "pleasesignin": "Please sign in to continue",
+        "user": "User",
+        "password": "Password",
+        "signin": "Sign in",
+        "copyright": "All rights reserved."
     },
     "menu": {
-        "home": "Home",
+        "houston": "Houston",
         "esp": "Spanish",
         "eng": "English",
         "settings": "Settings",
@@ -19,16 +19,14 @@
         "messages": "Messages",
         "logout": "Logout",
         "apps": {
-            "admin": "Admin",
-            "adminDesc": "General settings",
-            "companies": "Companies",
-            "companiesDesc": "Companies and licenses"
-        },
-        "companies":{
-            "defineCompanies": "Define companies",
-            "defineSets": "Define Sets",
-            "setLicences":"Licences"
-            
+            "houston": {
+                "companies": {
+                    "companies": "Companies",
+                    "defineCompanies": "Define companies",
+                    "defineSets": "Define Sets",
+                    "setLicences": "Licences"
+                }
+            }
         }
     }
 }

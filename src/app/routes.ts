@@ -9,6 +9,7 @@ import { QRCodesComponent } from './portal/components/qrcodes/qrcodes.component'
 export const routes: Routes = [
     { path: 'home', component: HomebrewComponent, canActivate:[AuthGuard] },
     { path: 'qrcodes', component: QRCodesComponent },
+    { path: 'houston', component: QRCodesComponent },
     { path: '', redirectTo: '/login/', pathMatch: 'full' },
     { path: 'login/:errorType', component: LoginComponent, pathMatch: "full", canActivate:[LoginGuard] },
     { path: 'notfound', component: NotFoundComponent },

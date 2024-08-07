@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from 'primeng/api';
 import { MenuService } from '../../services/menu.service';
 import { App } from '../../models/App.model';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { LangService } from '../../services/lang.service';
-import { AppService } from '../../services/app.service';
+import { Menu } from '../../models/Menu.model';
 
 
 @Component({
@@ -14,13 +13,12 @@ import { AppService } from '../../services/app.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  items: MenuItem[] | undefined;
+  items: Menu[] | undefined;
   langList: string[] = [];
-  apps: App[] | undefined;
   auth: boolean = false;
 
   ngOnInit(): void {
-    this.menuService.menu$.subscribe((items) => {
+    this.menuService.mainMenu$.subscribe((items) => {
       this.items = items;
     });
     
@@ -30,12 +28,8 @@ export class MenuComponent implements OnInit {
     private authService: AuthService,
     private menuService: MenuService,
     private langService: LangService,
-    private appService:AppService,
     private router: Router
   ) {
-    appService.getApps().then(data => {
-      this.apps = data;
-    });
 
 
 
@@ -51,9 +45,7 @@ export class MenuComponent implements OnInit {
     });
 
   }
-  callApp(app:App){
-    this.appService.setCurrentApp(app);
+  clearApp(){
+    this.menuService.setCurrentApp(new App);
   }
-
-
 }

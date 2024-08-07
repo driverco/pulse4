@@ -2,9 +2,8 @@ import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { MenuService } from '../../services/menu.service';
-import { MenuItem } from 'primeng/api';
 import { LangService } from '../../services/lang.service';
-import { AppService } from '../../services/app.service';
+import { Menu } from '../../models/Menu.model';
 
 @Component({
   selector: 'portal-login',
@@ -15,9 +14,9 @@ export class LoginComponent {
   error!: String;
   usernm!: String;
   paswd!: String;
-  langList: MenuItem[] =[];
+  langList: Menu[] =[];
 
-  constructor(private authService: AuthService, private langService:LangService, private menuService: MenuService, private appService: AppService, private router: Router) {
+  constructor(private authService: AuthService, private langService:LangService, private menuService: MenuService, private router: Router) {
     this.langList = this.menuService.langs;
    }
   
@@ -75,7 +74,6 @@ export class LoginComponent {
     this.authService.authenticate(this.usernm, this.paswd).then((data) => {
       if (data === true) {
         this.errorType = 'authOk';
-        this.menuService.menuOpen =false;
         this.router.navigate(["/home"]);
       } else {
         this.errorType = 'invalidData';

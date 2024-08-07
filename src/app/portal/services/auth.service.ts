@@ -46,7 +46,8 @@ export class AuthService {
       return false;
     });
   }
-  signout() {
+  async signout() {
+    console.log("cerrar sesion");
     this.authenticatedSource.next(false);
     localStorage.removeItem('username');
     localStorage.removeItem('role');

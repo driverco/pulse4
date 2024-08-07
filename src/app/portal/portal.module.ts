@@ -16,6 +16,7 @@ import { CardModule } from 'primeng/card';
 import { PasswordModule } from 'primeng/password';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
+import { FieldsetModule } from 'primeng/fieldset'
 import { PortalComponent } from './components/portal/portal.component';
 import { PortalHeaderComponent } from './components/portalheader/portalheader.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -28,7 +29,6 @@ import { LangService } from './services/lang.service';
 import { AuthService } from './services/auth.service';
 import { UsersService } from './services/users.service';
 import { HomebrewComponent } from './components/homebrew/homebrew.component';
-import { AppService } from './services/app.service';
 import { QRCodesComponent } from './components/qrcodes/qrcodes.component';
 
 
@@ -52,10 +52,11 @@ import { QRCodesComponent } from './components/qrcodes/qrcodes.component';
     InputTextModule,
     PasswordModule,
     FormsModule,
+    FieldsetModule,
     TranslocoModule,
     QrCodeModule
   ],
-  providers: [MenuService, LangService, AuthService, UsersService, AppService
+  providers: [MenuService, LangService, AuthService, UsersService
   ],
   exports: [PortalComponent],
 })
